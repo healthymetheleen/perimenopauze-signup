@@ -3,255 +3,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Heleen Bergsma – Link in Bio</title>
+  <title>Perimenopauze Plan – Link in Bio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --mauve: #9A5672;
-      --aubergine: #6A374C;
-      --steel: #79A1B5;
-      --offwhite: #F0EEE8;
-      --peach: #E0A880;
-      --lblue: #C4E5E9;
-      --coral: #E08781;
-      --pink: #D78496;
+      --mauve: #9A5672; --aubergine: #6A374C; --steel: #79A1B5;
+      --offwhite: #F0EEE8; --peach: #E0A880;
     }
-
     body {
       font-family: 'Poppins', sans-serif;
       background: var(--offwhite);
       color: #3a2a30;
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      display: flex; flex-direction: column; align-items: center;
       padding: 32px 16px 48px;
     }
-
-    .profile {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 28px;
-    }
-
+    .profile { display: flex; flex-direction: column; align-items: center; gap: 12px; margin-bottom: 28px; }
     .avatar {
-      width: 88px;
-      height: 88px;
-      border-radius: 50%;
+      width: 88px; height: 88px; border-radius: 50%;
       background: linear-gradient(135deg, var(--mauve), var(--aubergine));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: -1px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem; font-weight: 700; color: #fff;
       box-shadow: 0 4px 20px rgba(154,86,114,0.3);
-      flex-shrink: 0;
     }
-
-    .profile-name {
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--aubergine);
-      text-align: center;
-    }
-
-    .profile-tagline {
-      font-size: 0.82rem;
-      color: #7a5a65;
-      text-align: center;
-      max-width: 260px;
-      line-height: 1.5;
-    }
-
-    .links {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      width: 100%;
-      max-width: 400px;
-    }
-
+    .profile-name { font-size: 1.2rem; font-weight: 600; color: var(--aubergine); text-align: center; }
+    .profile-tagline { font-size: 0.82rem; color: #7a5a65; text-align: center; max-width: 260px; line-height: 1.5; }
+    .links { display: flex; flex-direction: column; gap: 12px; width: 100%; max-width: 400px; }
     .link-btn {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 16px 20px;
-      border-radius: 16px;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
+      display: flex; align-items: center; gap: 14px;
+      padding: 16px 20px; border-radius: 16px;
+      text-decoration: none; font-size: 0.9rem; font-weight: 500;
       transition: transform 0.15s ease, box-shadow 0.15s ease;
-      position: relative;
-      overflow: hidden;
     }
-
-    .link-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(106,55,76,0.18);
-    }
-
-    .link-btn:active {
-      transform: translateY(0);
-    }
-
-    .link-btn .icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      flex-shrink: 0;
-    }
-
-    .link-btn .label {
-      flex: 1;
-    }
-
-    .link-btn .label strong {
-      display: block;
-      font-weight: 600;
-      font-size: 0.88rem;
-    }
-
-    .link-btn .label span {
-      font-size: 0.75rem;
-      opacity: 0.75;
-    }
-
-    .link-btn .arrow {
-      opacity: 0.4;
-      font-size: 1rem;
-    }
-
-    /* Variant: primary (mauve) */
-    .btn-primary {
-      background: linear-gradient(135deg, var(--mauve), var(--aubergine));
-      color: #fff;
-      box-shadow: 0 4px 16px rgba(154,86,114,0.25);
-    }
+    .link-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(106,55,76,0.18); }
+    .link-btn .icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+    .link-btn .label { flex: 1; }
+    .link-btn .label strong { display: block; font-weight: 600; font-size: 0.88rem; }
+    .link-btn .label span { font-size: 0.75rem; opacity: 0.75; }
+    .link-btn .arrow { opacity: 0.4; font-size: 1rem; }
+    .btn-primary { background: linear-gradient(135deg, var(--mauve), var(--aubergine)); color: #fff; box-shadow: 0 4px 16px rgba(154,86,114,0.25); }
     .btn-primary .icon { background: rgba(255,255,255,0.18); }
     .btn-primary .arrow { opacity: 0.6; }
-
-    /* Variant: peach */
-    .btn-peach {
-      background: #fff;
-      color: #3a2a30;
-      border: 2px solid var(--peach);
-      box-shadow: 0 2px 12px rgba(224,168,128,0.15);
-    }
-    .btn-peach .icon { background: #fff5ee; }
-
-    /* Variant: steel */
-    .btn-steel {
-      background: #fff;
-      color: #3a2a30;
-      border: 2px solid var(--steel);
-      box-shadow: 0 2px 12px rgba(121,161,181,0.12);
-    }
+    .btn-steel { background: #fff; color: #3a2a30; border: 2px solid var(--steel); box-shadow: 0 2px 12px rgba(121,161,181,0.12); }
     .btn-steel .icon { background: #edf5f9; }
-
-    /* Variant: light */
-    .btn-light {
-      background: #fff;
-      color: #3a2a30;
-      border: 2px solid #e8e0e4;
-      box-shadow: 0 2px 8px rgba(106,55,76,0.06);
-    }
+    .btn-light { background: #fff; color: #3a2a30; border: 2px solid #e8e0e4; box-shadow: 0 2px 8px rgba(106,55,76,0.06); }
     .btn-light .icon { background: var(--offwhite); }
-
-    .divider {
-      text-align: center;
-      font-size: 0.7rem;
-      color: #b09aa5;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin: 4px 0 4px;
-    }
-
-    .footer {
-      margin-top: 32px;
-      text-align: center;
-      font-size: 0.7rem;
-      color: #b09aa5;
-    }
+    .divider { text-align: center; font-size: 0.7rem; color: #b09aa5; letter-spacing: 0.06em; text-transform: uppercase; margin: 4px 0; }
+    .footer { margin-top: 32px; text-align: center; font-size: 0.7rem; color: #b09aa5; }
   </style>
 </head>
 <body>
 
   <div class="profile">
-    <div class="avatar">HB</div>
-    <div class="profile-name">Heleen Bergsma</div>
-    <div class="profile-tagline">Orthomoleculair therapeut · Perimenopauze specialist · Den Bosch</div>
+    <div class="avatar">&#127807;</div>
+    <div class="profile-name">Perimenopauze Plan</div>
+    <div class="profile-tagline">Hormonale balans &#183; Energie &#183; Omega-3 suppletie</div>
   </div>
 
   <div class="links">
 
-    <!-- Gratis gids — primary CTA -->
     <a href="index.html" class="link-btn btn-primary">
-      <div class="icon">🎁</div>
+      <div class="icon">&#127873;</div>
       <div class="label">
         <strong>Gratis Omega-3 Gids</strong>
-        <span>Download · 5 essentiële feiten</span>
+        <span>Download &#183; 5 essenti&#235;le feiten</span>
       </div>
-      <span class="arrow">›</span>
+      <span class="arrow">&#8250;</span>
     </a>
 
-    <div class="divider">Meer over mij</div>
-
-    <!-- Website -->
-    <a href="https://www.healthymetheleen.nl" target="_blank" class="link-btn btn-peach">
-      <div class="icon">🌿</div>
-      <div class="label">
-        <strong>Mijn website</strong>
-        <span>healthymetheleen.nl</span>
-      </div>
-      <span class="arrow">›</span>
-    </a>
-
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/heleenbergsma" target="_blank" class="link-btn btn-light">
-      <div class="icon">📸</div>
-      <div class="label">
-        <strong>Instagram</strong>
-        <span>@heleenbergsma</span>
-      </div>
-      <span class="arrow">›</span>
-    </a>
-
-    <div class="divider">Producten</div>
-
-    <!-- Eqology Omega-3 -->
-    <a href="https://www.eqology.com" target="_blank" class="link-btn btn-steel">
-      <div class="icon">🐟</div>
-      <div class="label">
-        <strong>Eqology Omega-3</strong>
-        <span>Pure visolie · Klinisch getest</span>
-      </div>
-      <span class="arrow">›</span>
-    </a>
-
-    <!-- Perimenopauze test -->
-    <a href="https://www.healthymetheleen.nl" target="_blank" class="link-btn btn-light">
-      <div class="icon">✅</div>
+    <a href="test.html" class="link-btn btn-light">
+      <div class="icon">&#10003;</div>
       <div class="label">
         <strong>Doe de perimenopauze test</strong>
-        <span>Gratis · 2 minuten</span>
+        <span>Gratis &#183; 2 minuten</span>
       </div>
-      <span class="arrow">›</span>
+      <span class="arrow">&#8250;</span>
+    </a>
+
+    <div class="divider">Suppletie</div>
+
+    <a href="https://www.eqology.com" target="_blank" rel="noopener noreferrer" class="link-btn btn-steel">
+      <div class="icon">&#128032;</div>
+      <div class="label">
+        <strong>Eqology Omega-3</strong>
+        <span>Pure visolie &#183; Klinisch getest</span>
+      </div>
+      <span class="arrow">&#8250;</span>
     </a>
 
   </div>
 
-  <div class="footer">© Heleen Bergsma · Healthy met Heleen</div>
+  <div class="footer">&#169; Perimenopauze Plan</div>
 
 </body>
 </html>
