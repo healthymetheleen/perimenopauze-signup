@@ -80,9 +80,7 @@
       margin-bottom: 12px;
     }
 
-    .hero h1 span {
-      color: var(--peach);
-    }
+    .hero h1 span { color: var(--peach); }
 
     .hero p {
       color: rgba(255,255,255,0.82);
@@ -106,7 +104,6 @@
       gap: 12px;
       padding: 10px 0;
       font-size: 14px;
-      font-weight: 400;
       color: #5a3a46;
       border-bottom: 1px solid #f0e8ec;
     }
@@ -125,59 +122,71 @@
       font-size: 13px;
     }
 
-    .form-group {
-      margin-bottom: 14px;
+    /* ── MailerLite embed overrides ─────────────────────────── */
+    .ml-embedded {
+      font-family: 'Poppins', sans-serif !important;
     }
 
-    .form-group label {
-      display: block;
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--aubergine);
-      margin-bottom: 6px;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
+    .ml-embedded .ml-form-embedWrapper {
+      background: transparent !important;
+      padding: 0 !important;
+      border: none !important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
     }
 
-    .form-group input {
-      width: 100%;
-      padding: 14px 18px;
-      border: 1.5px solid #e0d0d8;
-      border-radius: 12px;
-      font-family: 'Poppins', sans-serif;
-      font-size: 15px;
-      color: #3a2a30;
-      background: #fdfafb;
-      outline: none;
-      transition: border-color 0.2s;
+    .ml-embedded .ml-form-embedBody {
+      padding: 0 !important;
     }
 
-    .form-group input:focus {
-      border-color: var(--mauve);
-      background: #fff;
+    .ml-embedded .ml-form-embedBody .ml-form-embedContent {
+      display: none !important; /* hide MailerLite's own title/desc */
     }
 
-    .form-group input::placeholder { color: #bba8b0; }
-
-    .btn {
-      width: 100%;
-      padding: 16px;
-      background: linear-gradient(135deg, var(--mauve), var(--aubergine));
-      color: #fff;
-      font-family: 'Poppins', sans-serif;
-      font-size: 16px;
-      font-weight: 600;
-      border: none;
-      border-radius: 14px;
-      cursor: pointer;
-      margin-top: 8px;
-      transition: transform 0.15s, box-shadow 0.15s;
-      box-shadow: 0 4px 16px rgba(154,86,114,0.3);
+    .ml-embedded .ml-form-fieldRow input[type="text"],
+    .ml-embedded .ml-form-fieldRow input[type="email"] {
+      font-family: 'Poppins', sans-serif !important;
+      font-size: 15px !important;
+      border: 1.5px solid #e0d0d8 !important;
+      border-radius: 12px !important;
+      padding: 14px 18px !important;
+      background: #fdfafb !important;
+      color: #3a2a30 !important;
+      box-shadow: none !important;
     }
 
-    .btn:hover { transform: translateY(-1px); box-shadow: 0 6px 24px rgba(154,86,114,0.4); }
-    .btn:active { transform: translateY(0); }
-    .btn:disabled { opacity: 0.7; cursor: not-allowed; }
+    .ml-embedded .ml-form-fieldRow input:focus {
+      border-color: var(--mauve) !important;
+      background: #fff !important;
+      outline: none !important;
+    }
+
+    .ml-embedded .ml-form-embedSubmit button {
+      font-family: 'Poppins', sans-serif !important;
+      font-size: 16px !important;
+      font-weight: 600 !important;
+      background: linear-gradient(135deg, var(--mauve), var(--aubergine)) !important;
+      color: #fff !important;
+      border: none !important;
+      border-radius: 14px !important;
+      padding: 16px !important;
+      width: 100% !important;
+      cursor: pointer !important;
+      box-shadow: 0 4px 16px rgba(154,86,114,0.3) !important;
+      transition: transform 0.15s, box-shadow 0.15s !important;
+    }
+
+    .ml-embedded .ml-form-embedSubmit button:hover {
+      transform: translateY(-1px) !important;
+      box-shadow: 0 6px 24px rgba(154,86,114,0.4) !important;
+    }
+
+    .ml-embedded .ml-form-successBody {
+      font-family: 'Poppins', sans-serif !important;
+      text-align: center !important;
+      padding: 24px 0 !important;
+      color: var(--aubergine) !important;
+    }
 
     .privacy {
       text-align: center;
@@ -185,48 +194,6 @@
       color: #b09aa0;
       margin-top: 14px;
       line-height: 1.5;
-    }
-
-    .success {
-      display: none;
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    .success .check {
-      width: 72px;
-      height: 72px;
-      background: linear-gradient(135deg, var(--mauve), var(--aubergine));
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-      font-size: 32px;
-    }
-
-    .success h2 {
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--aubergine);
-      margin-bottom: 10px;
-    }
-
-    .success p {
-      font-size: 14px;
-      color: #7a5a64;
-      line-height: 1.6;
-    }
-
-    .error-msg {
-      display: none;
-      background: #fdf0f0;
-      border: 1px solid #f0c0c0;
-      color: #c04040;
-      font-size: 13px;
-      padding: 10px 14px;
-      border-radius: 10px;
-      margin-top: 10px;
     }
 
     @media (max-width: 480px) {
@@ -265,84 +232,27 @@
       </li>
     </ul>
 
-    <div id="formBlock">
-      <div class="form-group">
-        <label>Voornaam</label>
-        <input type="text" id="nameInput" placeholder="Jouw naam" autocomplete="given-name" />
-      </div>
-      <div class="form-group">
-        <label>E-mailadres *</label>
-        <input type="email" id="emailInput" placeholder="jouw@email.nl" autocomplete="email" required />
-      </div>
+    <!-- MailerLite embedded form — vervang JOUW_FORM_ID hieronder -->
+    <div class="ml-embedded" data-form="JOUW_FORM_ID"></div>
 
-      <button class="btn" id="submitBtn" onclick="handleSubmit()">
-        Stuur me de gratis gids →
-      </button>
-
-      <div class="error-msg" id="errorMsg"></div>
-
-      <p class="privacy">
-        Je gegevens zijn veilig. Geen spam, altijd uitschrijven mogelijk.<br/>
-        Door je aan te melden ga je akkoord met onze privacyverklaring.
-      </p>
-    </div>
-
-    <div class="success" id="successBlock">
-      <div class="check">✓</div>
-      <h2>Bijna klaar!</h2>
-      <p>Check je inbox — we sturen de gids direct naar je toe.<br/><br/>
-      Controleer ook je spammap als je niks ziet.</p>
-    </div>
+    <p class="privacy">
+      Je gegevens zijn veilig. Geen spam, altijd uitschrijven mogelijk.<br/>
+      Door je aan te melden ga je akkoord met onze privacyverklaring.
+    </p>
   </div>
 </div>
 
+<!-- MailerLite universal script — account ID 2161991 is al ingevuld -->
 <script>
-  async function handleSubmit() {
-    const btn = document.getElementById('submitBtn');
-    const email = document.getElementById('emailInput').value.trim();
-    const name = document.getElementById('nameInput').value.trim();
-    const errEl = document.getElementById('errorMsg');
-
-    errEl.style.display = 'none';
-
-    if (!email || !email.includes('@')) {
-      errEl.textContent = 'Vul een geldig e-mailadres in.';
-      errEl.style.display = 'block';
-      return;
-    }
-
-    btn.disabled = true;
-    btn.textContent = 'Even geduld…';
-
-    try {
-      const res = await fetch('/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, name }),
-      });
-
-      const data = await res.json();
-
-      if (data.success) {
-        document.getElementById('formBlock').style.display = 'none';
-        document.getElementById('successBlock').style.display = 'block';
-      } else {
-        errEl.textContent = data.error || 'Er ging iets mis, probeer opnieuw.';
-        errEl.style.display = 'block';
-        btn.disabled = false;
-        btn.textContent = 'Stuur me de gratis gids →';
-      }
-    } catch (e) {
-      errEl.textContent = 'Verbinding mislukt. Controleer je internet.';
-      errEl.style.display = 'block';
-      btn.disabled = false;
-      btn.textContent = 'Stuur me de gratis gids →';
-    }
-  }
-
-  document.getElementById('emailInput').addEventListener('keypress', e => {
-    if (e.key === 'Enter') handleSubmit();
-  });
+  (function(m,a,i,l,e,r){
+    m['MailerLiteObject']=e;
+    function f(){var c={a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
+    f.q=f.q||[];m[e]=m[e]||f.bind(f.q);m[e].q=m[e].q||f.q;
+    r=a.createElement(i);var _=a.getElementsByTagName(i)[0];
+    r.async=1;r.src=l+'?v'+(~~(new Date().getTime()/1000000));
+    _.parentNode.insertBefore(r,_);
+  })(window, document, 'script', 'https://assets.mailerlite.com/js/universal.js', 'ml');
+  ml('account', '2161991');
 </script>
 
 </body>
