@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download gratis: 7 Signalen van Perimenopauze</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --mauve: #9A5672;
+  --aubergine: #6A374C;
+  --steel: #79A1B5;
+  --offwhite: #F0EEE8;
+  --peach: #E0A880;
+  --coral: #E08781;
+  --pink: #D78496;
+  --lightblue: #C4E5E9;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--offwhite);
+  color: #3a2a30;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 24px;
+  max-width: 520px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(154,86,114,0.14);
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--mauve) 0%, var(--aubergine) 60%, #4a2438 100%);
+  padding: 48px 40px 44px;
+  text-align: center;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 240px; height: 240px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 50%;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; left: 0; right: 0;
+  height: 32px;
+  background: #fff;
+  border-radius: 50% 50% 0 0 / 32px 32px 0 0;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.9);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 100px;
+  border: 1px solid rgba(255,255,255,0.2);
+  margin-bottom: 22px;
+  position: relative; z-index: 1;
+}
+
+.big-number {
+  font-size: 88px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.12);
+  line-height: 1;
+  position: absolute;
+  top: 28px; left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 12px;
+  position: relative; z-index: 1;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--peach);
+}
+
+.hero p {
+  color: rgba(255,255,255,0.82);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.6;
+  position: relative; z-index: 1;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.body {
+  padding: 32px 40px 40px;
+}
+
+.what-you-get {
+  margin-bottom: 28px;
+}
+
+.what-you-get h3 {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--mauve);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.benefits {
+  list-style: none;
+}
+
+.benefits li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #5a3a46;
+  border-bottom: 1px solid #f5eff2;
+}
+
+.benefits li:last-child { border-bottom: none; }
+
+.benefits li .icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--mauve), var(--peach));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 14px;
+}
+
+/* Form section */
+.form-section {
+  border-top: 1.5px solid #f0e8ec;
+  padding-top: 24px;
+}
+
+.form-section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--aubergine);
+  margin-bottom: 6px;
+}
+
+.form-section p {
+  font-size: 13px;
+  color: #8a7a80;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* MailerLite embed overrides */
+.ml-embedded { font-family: 'Poppins', sans-serif !important; }
+.ml-embedded .ml-form-embedWrapper {
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+.ml-embedded .ml-form-embedBody { padding: 0 !important; }
+.ml-embedded .ml-form-embedBody .ml-form-embedContent { display: none !important; }
+.ml-embedded .ml-form-fieldRow input[type="text"],
+.ml-embedded .ml-form-fieldRow input[type="email"] {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 15px !important;
+  border: 1.5px solid #e0d0d8 !important;
+  border-radius: 12px !important;
+  padding: 14px 18px !important;
+  background: #fdfafb !important;
+  color: #3a2a30 !important;
+  box-shadow: none !important;
+}
+.ml-embedded .ml-form-fieldRow input:focus {
+  border-color: var(--mauve) !important;
+  background: #fff !important;
+  outline: none !important;
+}
+.ml-embedded .ml-form-embedSubmit button {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  background: linear-gradient(135deg, var(--mauve), var(--aubergine)) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 14px !important;
+  padding: 16px !important;
+  width: 100% !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 16px rgba(154,86,114,0.3) !important;
+  transition: transform 0.15s, box-shadow 0.15s !important;
+}
+.ml-embedded .ml-form-embedSubmit button:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 24px rgba(154,86,114,0.4) !important;
+}
+.ml-embedded .ml-form-successBody {
+  font-family: 'Poppins', sans-serif !important;
+  text-align: center !important;
+  padding: 16px 0 8px !important;
+  color: var(--aubergine) !important;
+}
+
+/* Download reveal */
+.download-reveal {
+  display: none;
+  text-align: center;
+  padding: 24px 0 8px;
+  animation: fadeIn 0.4s ease;
+}
+.download-reveal .success-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+.download-reveal h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--aubergine);
+  margin-bottom: 8px;
+}
+.download-reveal p {
+  font-size: 13px;
+  color: #8a7a80;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--mauve), var(--aubergine));
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 16px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(106,55,76,0.3);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(106,55,76,0.4);
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.privacy {
+  text-align: center;
+  font-size: 11.5px;
+  color: #b09aa0;
+  margin-top: 16px;
+  line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  .hero { padding: 36px 24px 40px; }
+  .body { padding: 24px 24px 32px; }
+  .hero h1 { font-size: 22px; }
+  .big-number { font-size: 64px; }
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="hero">
+    <div class="big-number">7</div>
+    <div class="badge">Gratis gids</div>
+    <h1>7 Signalen dat jij<br>in de <em>Perimenopauze</em> bent</h1>
+    <p>Herken de klachten. Begrijp je hormonen. Weet wat je kunt doen.</p>
+  </div>
+
+  <div class="body">
+    <div class="what-you-get">
+      <h3>Wat je krijgt</h3>
+      <ul class="benefits">
+        <li>
+          <span class="icon">🔍</span>
+          <span>De 7 meest voorkomende signalen van perimenopauze — helder uitgelegd</span>
+        </li>
+        <li>
+          <span class="icon">⚡</span>
+          <span>Wat er hormonaal speelt — en waarom zo veel vrouwen het missen</span>
+        </li>
+        <li>
+          <span class="icon">🌿</span>
+          <span>Praktische eerste stappen die je vandaag kunt beginnen</span>
+        </li>
+        <li>
+          <span class="icon">📄</span>
+          <span>Mooi opgemaakt als PDF — bewaar of print voor later</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="form-section">
+      <h3>Stuur mij de gratis gids</h3>
+      <p>Vul je naam en e-mail in. Je ontvangt de gids direct.</p>
+
+      <!-- MailerLite form — update data-form to your NL perimenopauze form ID -->
+      <div class="ml-embedded" data-form="ddiHiT"></div>
+
+      <!-- Shown after successful signup -->
+      <div class="download-reveal" id="download-reveal">
+        <div class="success-icon">✅</div>
+        <h3>Je bent erbij!</h3>
+        <p>Klik hieronder om de gids direct te openen en op te slaan als PDF.</p>
+        <a class="download-btn" href="giveaway-perimenopauze-nl.html" target="_blank">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download de gids (PDF)
+        </a>
+        <p style="margin-top:14px; font-size:12px; color:#b09aa0;">
+          Tip: gebruik Ctrl+P (Windows) of Cmd+P (Mac) om op te slaan als PDF.
+        </p>
+      </div>
+
+    </div>
+
+    <p class="privacy">
+      Geen spam. Je kunt je altijd uitschrijven.<br>
+      Door je in te schrijven ga je akkoord met ons <a href="privacy-policy.html" style="color:var(--mauve);">privacybeleid</a>.
+    </p>
+  </div>
+</div>
+
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+.push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2161991');
+</script>
+
+<!-- Show download section after MailerLite form success -->
+<script>
+(function() {
+  function showDownload() {
+    var reveal = document.getElementById('download-reveal');
+    if (reveal) reveal.style.display = 'block';
+  }
+
+  // Watch for MailerLite success state via MutationObserver
+  function watchForSuccess() {
+    var container = document.querySelector('.ml-embedded');
+    if (!container) { setTimeout(watchForSuccess, 500); return; }
+
+    var observer = new MutationObserver(function() {
+      if (document.querySelector('.ml-form-successBody')) {
+        showDownload();
+        observer.disconnect();
+      }
+    });
+    observer.observe(container, { childList: true, subtree: true });
+  }
+
+  document.addEventListener('DOMContentLoaded', watchForSuccess);
+})();
+</script>
+
+</body>
+</html>

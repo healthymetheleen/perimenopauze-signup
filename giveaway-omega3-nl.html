@@ -180,9 +180,26 @@
   .print-bar button { background: var(--steel); color: white; }
   .print-bar a { background: white; color: var(--aubergine); border: 1.5px solid var(--lightblue); }
   .print-bar button:hover, .print-bar a:hover { opacity: 0.85; }
+  /* ── PRINT BUTTON ── */
+  .print-btn {
+    position: fixed; bottom: 24px; right: 24px; z-index: 999;
+    background: linear-gradient(135deg, #9A5672, #6A374C);
+    color: white; border: none; border-radius: 50px;
+    padding: 14px 24px; font-family: 'Poppins', sans-serif;
+    font-size: 14px; font-weight: 600; cursor: pointer;
+    box-shadow: 0 4px 20px rgba(106,55,76,0.35);
+    display: flex; align-items: center; gap: 8px;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .print-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(106,55,76,0.45); }
+  @media print { .print-btn { display: none !important; } }
 </style>
 </head>
 <body>
+<button class="print-btn" onclick="window.print()">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+  Download PDF
+</button>
 
 <!-- Print bar -->
 <div class="print-bar no-print">
@@ -198,151 +215,3 @@
     <h1 class="cover-title">Omega-3 &amp;<br><span>De Perimenopauze</span></h1>
     <p class="cover-subtitle">Waarom dit visvetzuur essentieel is voor jouw hormonale balans — en hoe je het slim inzet</p>
     <div class="cover-line"></div>
-    <p class="cover-author">Door <strong>Heleen Bergsma</strong><br>Orthomoleculair therapeut &amp; perimenopauze specialist</p>
-  </div>
-</div>
-
-<!-- PAGE 2: FEITEN -->
-<div class="page">
-  <div class="content">
-    <div class="page-header">
-      <span class="page-header-brand">Healthy met Heleen</span>
-      <span class="page-header-title">Omega-3 &amp; Perimenopauze</span>
-    </div>
-    <p class="section-title">Waarom Omega-3 zo belangrijk is<br>tijdens de perimenopauze</p>
-    <p class="section-intro">Tijdens de perimenopauze schommelen je oestrogeen- en progesteronniveaus sterk. Omega-3 vetzuren spelen hierbij een cruciale rol — op meerdere vlakken tegelijk.</p>
-
-    <div class="fact-box">
-      <div class="fact-num">71%</div>
-      <div class="fact-label">Van de vrouwen heeft een tekort aan Omega-3</div>
-      <div class="fact-desc">De meeste vrouwen eten onvoldoende vette vis of supplementen. Juist in de perimenopauze is de behoefte verhoogd.</div>
-    </div>
-
-    <div class="fact-box">
-      <div class="fact-num">3–6 maanden</div>
-      <div class="fact-label">Duurt het voor je resultaat voelt</div>
-      <div class="fact-desc">Omega-3 werkt niet als een paracetamol. Consistent gebruik over meerdere maanden geeft de beste resultaten — denk aan betere slaap, minder opvliegers en meer focus.</div>
-    </div>
-
-    <div class="fact-box">
-      <div class="fact-num">EPA &amp; DHA</div>
-      <div class="fact-label">De twee vetzuren die ertoe doen</div>
-      <div class="fact-desc">EPA vermindert ontstekingen en ondersteunt je stemming. DHA is essentieel voor de hersenfunctie — het bekende "brain fog" is deels een DHA-tekort.</div>
-    </div>
-
-    <div class="callout">
-      <p>"Oestrogeen reguleert hoe je lichaam omega-3 verwerkt. Als oestrogeen daalt, heb je <strong>meer omega-3 nodig</strong> — niet minder."</p>
-    </div>
-  </div>
-</div>
-
-<!-- PAGE 3: VOORDELEN -->
-<div class="page">
-  <div class="content">
-    <div class="page-header">
-      <span class="page-header-brand">Healthy met Heleen</span>
-      <span class="page-header-title">Omega-3 &amp; Perimenopauze</span>
-    </div>
-    <p class="section-title">5 voordelen van Omega-3<br>tijdens de perimenopauze</p>
-    <p class="section-intro">Dit zijn de gebieden waarop vrouwen in de perimenopauze het meeste verschil merken bij voldoende Omega-3 inname.</p>
-
-    <div class="benefits">
-      <div class="benefit-card">
-        <div class="benefit-icon">🧠</div>
-        <div class="benefit-title">Minder brain fog</div>
-        <div class="benefit-desc">DHA is een bouwsteen van hersencellen. Voldoende DHA verbetert concentratie, geheugen en mentale helderheid.</div>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">😴</div>
-        <div class="benefit-title">Betere slaap</div>
-        <div class="benefit-desc">Omega-3 verhoogt de melatonineproductie en vermindert nachtelijk zweten — twee klachten die in de perimenopauze vaak samengaan.</div>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">🌡</div>
-        <div class="benefit-title">Minder opvliegers</div>
-        <div class="benefit-desc">EPA heeft een ontstekingsremmende werking die de frequentie en intensiteit van opvliegers kan verminderen.</div>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">💪</div>
-        <div class="benefit-title">Betere gewrichten</div>
-        <div class="benefit-desc">Gewrichtspijn neemt toe bij dalend oestrogeen. Omega-3 smeert gewrichten en remt ontstekingsprocessen.</div>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">😊</div>
-        <div class="benefit-title">Stabielere stemming</div>
-        <div class="benefit-desc">EPA helpt bij het reguleren van serotonine en dopamine — de neurotransmitters die je stemming bepalen.</div>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">❤️</div>
-        <div class="benefit-title">Hart &amp; bloedvaten</div>
-        <div class="benefit-desc">Na de menopauze stijgt het cardiovasculaire risico. Omega-3 beschermt het hart en verlaagt triglyceriden.</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- PAGE 4: BRONNEN -->
-<div class="page">
-  <div class="content">
-    <div class="page-header">
-      <span class="page-header-brand">Healthy met Heleen</span>
-      <span class="page-header-title">Omega-3 &amp; Perimenopauze</span>
-    </div>
-    <p class="section-title">De beste bronnen van Omega-3</p>
-    <p class="section-intro">Voeding first — maar supplementen zijn voor veel vrouwen noodzakelijk om voldoende te halen.</p>
-
-    <div class="source-item">
-      <div class="source-dot">1</div>
-      <div class="source-text">
-        <strong>Vette vis (2–3x per week)</strong><br>
-        Zalm, makreel, haring, sardines en ansjovis zijn de rijkste bronnen. Let op: gekweekte vis bevat minder EPA/DHA dan wilde vis.
-      </div>
-    </div>
-    <div class="source-item">
-      <div class="source-dot">2</div>
-      <div class="source-text">
-        <strong>Lijnzaad &amp; chiazaad</strong><br>
-        Bevatten ALA (een plantaardig omega-3), maar je lichaam zet slechts ~5% om naar EPA/DHA. Niet voldoende als enige bron.
-      </div>
-    </div>
-    <div class="source-item">
-      <div class="source-dot">3</div>
-      <div class="source-text">
-        <strong>Omega-3 supplementen (visolie)</strong><br>
-        Kies voor supplementen met minimaal 1000 mg EPA+DHA per dag. Let op zuiverheid (geen zware metalen) en versgeperstheid.
-      </div>
-    </div>
-    <div class="source-item">
-      <div class="source-dot">4</div>
-      <div class="source-text">
-        <strong>Algenolie (vegan optie)</strong><br>
-        Vis haalt zijn omega-3 uit algen. Algenolie slaat de tussenstap over en is even effectief — duurzamer bovendien.
-      </div>
-    </div>
-
-    <div class="callout">
-      <p><strong>Kwaliteit maakt het verschil.</strong> Veel visolies op de markt zijn al geoxideerd voor je de fles opent. Kies voor verse, moleculair gedestilleerde omega-3 met een hoge concentratie EPA en DHA. De prijs per dosis is relevanter dan de prijs per capsule.</p>
-    </div>
-  </div>
-</div>
-
-<!-- PAGE 5: CTA -->
-<div class="page">
-  <div class="cta-page">
-    <h2>Klaar om te starten?</h2>
-    <p>Omega-3 is één van de meest onderzochte supplementen voor vrouwen in de perimenopauze. Een goede kwaliteit supplement maakt letterlijk het verschil.</p>
-    <div class="cta-box">
-      <div class="cta-label">Aanbevolen product</div>
-      <div class="cta-product">Eqology Pure Arctic Oil</div>
-      <div class="cta-desc">Verse, moleculair gedestilleerde omega-3 uit wilde Arctische vis. Hoog EPA &amp; DHA gehalte, wetenschappelijk getest op oxidatie en zuiverheid.</div>
-      <div class="cta-url">Vraag Heleen naar de link → @perimenopauseplan</div>
-    </div>
-    <p class="cta-footer">
-      Vragen? Volg <strong>@perimenopauseplan</strong> op Instagram &amp; X<br>
-      voor dagelijkse tips over hormonen en gezondheid
-    </p>
-  </div>
-</div>
-
-</body>
-</html>

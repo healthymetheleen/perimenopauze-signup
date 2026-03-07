@@ -137,9 +137,26 @@
   .print-bar button { background: var(--steel); color: white; }
   .print-bar a { background: white; color: var(--aubergine); border: 1.5px solid var(--lightblue); }
   .print-bar button:hover, .print-bar a:hover { opacity: 0.85; }
+  /* ── PRINT BUTTON ── */
+  .print-btn {
+    position: fixed; bottom: 24px; right: 24px; z-index: 999;
+    background: linear-gradient(135deg, #9A5672, #6A374C);
+    color: white; border: none; border-radius: 50px;
+    padding: 14px 24px; font-family: 'Poppins', sans-serif;
+    font-size: 14px; font-weight: 600; cursor: pointer;
+    box-shadow: 0 4px 20px rgba(106,55,76,0.35);
+    display: flex; align-items: center; gap: 8px;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .print-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(106,55,76,0.45); }
+  @media print { .print-btn { display: none !important; } }
 </style>
 </head>
 <body>
+<button class="print-btn" onclick="window.print()">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+  Download PDF
+</button>
 
 <div class="print-bar no-print">
   <a href="../dashboard/">← Dashboard</a>
@@ -154,151 +171,3 @@
     <h1 class="cover-title">Omega-3 &amp;<br><span>Perimenopause</span></h1>
     <p class="cover-subtitle">Why this fatty acid is essential for your hormonal balance — and how to use it wisely</p>
     <div class="cover-line"></div>
-    <p class="cover-author">By <strong>Heleen Bergsma</strong><br>Orthomolecular therapist &amp; perimenopause specialist</p>
-  </div>
-</div>
-
-<!-- PAGE 2: FACTS -->
-<div class="page">
-  <div class="content">
-    <div class="page-header">
-      <span class="page-header-brand">Healthy met Heleen</span>
-      <span class="page-header-title">Omega-3 &amp; Perimenopause</span>
-    </div>
-    <p class="section-title">Why Omega-3 matters so much<br>during perimenopause</p>
-    <p class="section-intro">During perimenopause, oestrogen and progesterone levels fluctuate dramatically. Omega-3 fatty acids play a crucial role — across multiple systems at once.</p>
-
-    <div class="fact-box">
-      <div class="fact-num">71%</div>
-      <div class="fact-label">Of women are deficient in Omega-3</div>
-      <div class="fact-desc">Most women don't eat enough oily fish or take supplements. During perimenopause, the need is even higher than usual.</div>
-    </div>
-
-    <div class="fact-box">
-      <div class="fact-num">3–6 months</div>
-      <div class="fact-label">Before you feel the full benefit</div>
-      <div class="fact-desc">Omega-3 isn't a quick fix. Consistent use over several months delivers the best results — better sleep, fewer hot flashes, improved focus.</div>
-    </div>
-
-    <div class="fact-box">
-      <div class="fact-num">EPA &amp; DHA</div>
-      <div class="fact-label">The two fatty acids that matter most</div>
-      <div class="fact-desc">EPA reduces inflammation and supports mood. DHA is essential for brain function — that "brain fog" so many women experience is partly a DHA deficiency.</div>
-    </div>
-
-    <div class="callout">
-      <p>"Oestrogen regulates how your body processes omega-3. As oestrogen declines, you actually need <strong>more omega-3</strong> — not less."</p>
-    </div>
-  </div>
-</div>
-
-<!-- PAGE 3: BENEFITS -->
-<div class="page">
-  <div class="content">
-    <div class="page-header">
-      <span class="page-header-brand">Healthy met Heleen</span>
-      <span class="page-header-title">Omega-3 &amp; Perimenopause</span>
-    </div>
-    <p class="section-title">5 benefits of Omega-3<br>during perimenopause</p>
-    <p class="section-intro">These are the areas where women in perimenopause notice the biggest difference when they get enough Omega-3.</p>
-
-    <div class="benefits">
-      <div class="benefit-card">
-        <div class="benefit-icon">🧠</div>
-        <div class="benefit-title">Less brain fog</div>
-        <div class="benefit-desc">DHA is a structural component of brain cells. Adequate DHA improves concentration, memory and mental clarity.</div>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">😴</div>
-        <div class="benefit-title">Better sleep</div>
-        <div class="benefit-desc">Omega-3 boosts melatonin production and reduces night sweats — two complaints that often go hand in hand during perimenopause.</div>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">🌡</div>
-        <div class="benefit-title">Fewer hot flashes</div>
-        <div class="benefit-desc">EPA's anti-inflammatory action can reduce both the frequency and intensity of hot flashes.</div>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">💪</div>
-        <div class="benefit-title">Better joint health</div>
-        <div class="benefit-desc">Joint pain increases as oestrogen drops. Omega-3 lubricates joints and inhibits inflammatory processes.</div>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">😊</div>
-        <div class="benefit-title">More stable mood</div>
-        <div class="benefit-desc">EPA helps regulate serotonin and dopamine — the neurotransmitters that determine your mood.</div>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">❤️</div>
-        <div class="benefit-title">Heart &amp; vascular health</div>
-        <div class="benefit-desc">Cardiovascular risk rises after menopause. Omega-3 protects the heart and lowers triglycerides.</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- PAGE 4: SOURCES -->
-<div class="page">
-  <div class="content">
-    <div class="page-header">
-      <span class="page-header-brand">Healthy met Heleen</span>
-      <span class="page-header-title">Omega-3 &amp; Perimenopause</span>
-    </div>
-    <p class="section-title">The best sources of Omega-3</p>
-    <p class="section-intro">Food first — but for most women, supplementation is necessary to reach adequate levels.</p>
-
-    <div class="source-item">
-      <div class="source-dot">1</div>
-      <div class="source-text">
-        <strong>Oily fish (2–3x per week)</strong><br>
-        Salmon, mackerel, herring, sardines and anchovies are the richest sources. Note: farmed fish contains significantly less EPA/DHA than wild-caught.
-      </div>
-    </div>
-    <div class="source-item">
-      <div class="source-dot">2</div>
-      <div class="source-text">
-        <strong>Flaxseed &amp; chia seeds</strong><br>
-        These contain ALA (a plant-based omega-3), but your body converts only ~5% into EPA/DHA. Not sufficient as a sole source.
-      </div>
-    </div>
-    <div class="source-item">
-      <div class="source-dot">3</div>
-      <div class="source-text">
-        <strong>Omega-3 supplements (fish oil)</strong><br>
-        Choose supplements with at least 1000 mg EPA+DHA per day. Check for purity (no heavy metals) and freshness.
-      </div>
-    </div>
-    <div class="source-item">
-      <div class="source-dot">4</div>
-      <div class="source-text">
-        <strong>Algae oil (vegan option)</strong><br>
-        Fish get their omega-3 from algae. Algae oil skips the middleman and is equally effective — and more sustainable.
-      </div>
-    </div>
-
-    <div class="callout">
-      <p><strong>Quality makes the difference.</strong> Many fish oils on the market are already oxidised before you open the bottle. Choose fresh, molecularly distilled omega-3 with a high concentration of EPA and DHA. Cost per dose matters more than cost per capsule.</p>
-    </div>
-  </div>
-</div>
-
-<!-- PAGE 5: CTA -->
-<div class="page">
-  <div class="cta-page">
-    <h2>Ready to get started?</h2>
-    <p>Omega-3 is one of the most well-researched supplements for women in perimenopause. A high-quality supplement makes a real, measurable difference.</p>
-    <div class="cta-box">
-      <div class="cta-label">Recommended product</div>
-      <div class="cta-product">Eqology Pure Arctic Oil</div>
-      <div class="cta-desc">Fresh, molecularly distilled omega-3 from wild Arctic fish. High EPA &amp; DHA content, scientifically tested for oxidation and purity.</div>
-      <div class="cta-url">Ask Heleen for the link → @perimenopauseplan</div>
-    </div>
-    <p class="cta-footer">
-      Questions? Follow <strong>@perimenopauseplan</strong> on Instagram &amp; X<br>
-      for daily tips on hormones and women's health
-    </p>
-  </div>
-</div>
-
-</body>
-</html>
