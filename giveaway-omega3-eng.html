@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Omega-3 &amp; Perimenopause — Free Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --mauve: #9A5672; --aubergine: #6A374C; --steel: #79A1B5;
+    --offwhite: #F0EEE8; --peach: #E0A880; --lightblue: #C4E5E9;
+    --coral: #E08781; --pink: #D78496; --text: #2d2d2d;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px; line-height: 1.65;
+    color: var(--text); background: var(--offwhite);
+  }
+  .page {
+    width: 210mm; min-height: 297mm; margin: 0 auto;
+    background: white; position: relative; overflow: hidden;
+    page-break-after: always;
+  }
+  @media screen {
+    .page { margin: 20px auto; box-shadow: 0 4px 30px rgba(0,0,0,.12); }
+  }
+  @media print {
+    body { background: white; }
+    .no-print { display: none !important; }
+  }
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+
+  .cover {
+    background: linear-gradient(150deg, #2a5a7a 0%, var(--steel) 50%, var(--lightblue) 100%);
+    height: 297mm; display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 60px 50px; text-align: center; position: relative;
+  }
+  .cover::before {
+    content: ''; position: absolute; top: -80px; right: -80px;
+    width: 280px; height: 280px; background: rgba(255,255,255,0.06); border-radius: 50%;
+  }
+  .cover::after {
+    content: ''; position: absolute; bottom: -60px; left: -60px;
+    width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%;
+  }
+  .cover-badge {
+    background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.3);
+    color: white; font-size: 11px; font-weight: 600; letter-spacing: 2px;
+    text-transform: uppercase; padding: 8px 22px; border-radius: 30px; margin-bottom: 40px;
+  }
+  .omega-symbol { font-size: 120px; font-weight: 600; color: rgba(255,255,255,0.12); line-height: 1; margin-bottom: 10px; }
+  .cover-title { font-size: 36px; font-weight: 600; color: white; line-height: 1.2; margin-bottom: 16px; position: relative; z-index: 1; }
+  .cover-title span { color: var(--peach); }
+  .cover-subtitle { font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.85); line-height: 1.5; margin-bottom: 50px; max-width: 420px; }
+  .cover-line { width: 60px; height: 3px; background: var(--peach); border-radius: 2px; margin: 0 auto 50px; }
+  .cover-author { font-size: 13px; color: rgba(255,255,255,0.75); font-weight: 300; }
+  .cover-author strong { font-weight: 600; color: white; }
+
+  .content { padding: 55px 55px 50px; min-height: 297mm; display: flex; flex-direction: column; }
+  .page-header {
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 1.5px solid var(--lightblue);
+    padding-bottom: 14px; margin-bottom: 36px;
+  }
+  .page-header-brand { font-size: 11px; font-weight: 600; color: var(--steel); letter-spacing: 1.5px; text-transform: uppercase; }
+  .page-header-title { font-size: 11px; color: #999; font-style: italic; }
+
+  .section-title { font-size: 22px; font-weight: 600; color: var(--aubergine); line-height: 1.25; margin-bottom: 8px; }
+  .section-intro { font-size: 14px; color: #666; margin-bottom: 30px; max-width: 520px; }
+
+  .fact-box {
+    border-left: 4px solid var(--steel); background: #f0f7fb;
+    padding: 18px 22px; border-radius: 0 10px 10px 0; margin-bottom: 18px;
+  }
+  .fact-box .fact-num { font-size: 28px; font-weight: 700; color: var(--steel); line-height: 1; }
+  .fact-box .fact-label { font-size: 13px; font-weight: 600; color: var(--aubergine); margin: 4px 0 6px; }
+  .fact-box .fact-desc { font-size: 13px; color: #555; line-height: 1.5; }
+
+  .benefits { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px; }
+  .benefit-card {
+    background: linear-gradient(135deg, #f5fafa 0%, white 100%);
+    border: 1.5px solid var(--lightblue); border-radius: 12px; padding: 18px 18px 16px;
+  }
+  .benefit-icon { font-size: 26px; margin-bottom: 8px; }
+  .benefit-title { font-size: 13px; font-weight: 600; color: var(--aubergine); margin-bottom: 4px; }
+  .benefit-desc { font-size: 12px; color: #666; line-height: 1.5; }
+
+  .callout {
+    background: linear-gradient(135deg, var(--aubergine) 0%, var(--mauve) 100%);
+    color: white; border-radius: 12px; padding: 24px 28px; margin: 24px 0;
+  }
+  .callout p { font-size: 15px; line-height: 1.6; }
+  .callout p strong { font-weight: 600; }
+
+  .source-item { display: flex; gap: 14px; margin-bottom: 14px; border-bottom: 1px solid #f0ece8; padding-bottom: 14px; }
+  .source-dot {
+    flex-shrink: 0; width: 28px; height: 28px; background: var(--lightblue);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 600; color: var(--steel);
+  }
+  .source-text { font-size: 12.5px; color: #555; line-height: 1.5; }
+  .source-text strong { color: var(--text); font-weight: 600; }
+
+  .cta-page {
+    background: linear-gradient(160deg, var(--offwhite) 0%, white 40%, var(--lightblue) 100%);
+    height: 297mm; display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 60px 55px; text-align: center;
+  }
+  .cta-page h2 { font-size: 28px; font-weight: 600; color: var(--aubergine); margin-bottom: 16px; }
+  .cta-page p { font-size: 15px; color: #555; line-height: 1.7; max-width: 460px; margin-bottom: 32px; }
+  .cta-box {
+    background: linear-gradient(135deg, var(--aubergine) 0%, var(--mauve) 100%);
+    color: white; border-radius: 14px; padding: 28px 36px; max-width: 400px; width: 100%; margin-bottom: 28px;
+  }
+  .cta-box .cta-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.7; margin-bottom: 8px; }
+  .cta-box .cta-product { font-size: 20px; font-weight: 600; margin-bottom: 8px; }
+  .cta-box .cta-desc { font-size: 13px; opacity: 0.85; line-height: 1.5; margin-bottom: 16px; }
+  .cta-box .cta-url { font-size: 13px; font-weight: 500; color: var(--peach); }
+  .cta-footer { font-size: 12px; color: #aaa; }
+  .cta-footer strong { color: var(--mauve); }
+
+  .print-bar {
+    position: fixed; bottom: 24px; right: 24px; z-index: 100; display: flex; gap: 10px;
+  }
+  .print-bar button, .print-bar a {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 20px; border-radius: 10px;
+    font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 500;
+    cursor: pointer; border: none; text-decoration: none;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15); transition: opacity 0.15s;
+  }
+  .print-bar button { background: var(--steel); color: white; }
+  .print-bar a { background: white; color: var(--aubergine); border: 1.5px solid var(--lightblue); }
+  .print-bar button:hover, .print-bar a:hover { opacity: 0.85; }
+</style>
+</head>
+<body>
+
+<div class="print-bar no-print">
+  <a href="../dashboard/">← Dashboard</a>
+  <button onclick="window.print()">🖨 Save as PDF</button>
+</div>
+
+<!-- PAGE 1: COVER -->
+<div class="page">
+  <div class="cover">
+    <div class="cover-badge">Free Guide</div>
+    <div class="omega-symbol">Ω</div>
+    <h1 class="cover-title">Omega-3 &amp;<br><span>Perimenopause</span></h1>
+    <p class="cover-subtitle">Why this fatty acid is essential for your hormonal balance — and how to use it wisely</p>
+    <div class="cover-line"></div>
+    <p class="cover-author">By <strong>Heleen Bergsma</strong><br>Orthomolecular therapist &amp; perimenopause specialist</p>
+  </div>
+</div>
+
+<!-- PAGE 2: FACTS -->
+<div class="page">
+  <div class="content">
+    <div class="page-header">
+      <span class="page-header-brand">Healthy met Heleen</span>
+      <span class="page-header-title">Omega-3 &amp; Perimenopause</span>
+    </div>
+    <p class="section-title">Why Omega-3 matters so much<br>during perimenopause</p>
+    <p class="section-intro">During perimenopause, oestrogen and progesterone levels fluctuate dramatically. Omega-3 fatty acids play a crucial role — across multiple systems at once.</p>
+
+    <div class="fact-box">
+      <div class="fact-num">71%</div>
+      <div class="fact-label">Of women are deficient in Omega-3</div>
+      <div class="fact-desc">Most women don't eat enough oily fish or take supplements. During perimenopause, the need is even higher than usual.</div>
+    </div>
+
+    <div class="fact-box">
+      <div class="fact-num">3–6 months</div>
+      <div class="fact-label">Before you feel the full benefit</div>
+      <div class="fact-desc">Omega-3 isn't a quick fix. Consistent use over several months delivers the best results — better sleep, fewer hot flashes, improved focus.</div>
+    </div>
+
+    <div class="fact-box">
+      <div class="fact-num">EPA &amp; DHA</div>
+      <div class="fact-label">The two fatty acids that matter most</div>
+      <div class="fact-desc">EPA reduces inflammation and supports mood. DHA is essential for brain function — that "brain fog" so many women experience is partly a DHA deficiency.</div>
+    </div>
+
+    <div class="callout">
+      <p>"Oestrogen regulates how your body processes omega-3. As oestrogen declines, you actually need <strong>more omega-3</strong> — not less."</p>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 3: BENEFITS -->
+<div class="page">
+  <div class="content">
+    <div class="page-header">
+      <span class="page-header-brand">Healthy met Heleen</span>
+      <span class="page-header-title">Omega-3 &amp; Perimenopause</span>
+    </div>
+    <p class="section-title">5 benefits of Omega-3<br>during perimenopause</p>
+    <p class="section-intro">These are the areas where women in perimenopause notice the biggest difference when they get enough Omega-3.</p>
+
+    <div class="benefits">
+      <div class="benefit-card">
+        <div class="benefit-icon">🧠</div>
+        <div class="benefit-title">Less brain fog</div>
+        <div class="benefit-desc">DHA is a structural component of brain cells. Adequate DHA improves concentration, memory and mental clarity.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">😴</div>
+        <div class="benefit-title">Better sleep</div>
+        <div class="benefit-desc">Omega-3 boosts melatonin production and reduces night sweats — two complaints that often go hand in hand during perimenopause.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🌡</div>
+        <div class="benefit-title">Fewer hot flashes</div>
+        <div class="benefit-desc">EPA's anti-inflammatory action can reduce both the frequency and intensity of hot flashes.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">💪</div>
+        <div class="benefit-title">Better joint health</div>
+        <div class="benefit-desc">Joint pain increases as oestrogen drops. Omega-3 lubricates joints and inhibits inflammatory processes.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">😊</div>
+        <div class="benefit-title">More stable mood</div>
+        <div class="benefit-desc">EPA helps regulate serotonin and dopamine — the neurotransmitters that determine your mood.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">❤️</div>
+        <div class="benefit-title">Heart &amp; vascular health</div>
+        <div class="benefit-desc">Cardiovascular risk rises after menopause. Omega-3 protects the heart and lowers triglycerides.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 4: SOURCES -->
+<div class="page">
+  <div class="content">
+    <div class="page-header">
+      <span class="page-header-brand">Healthy met Heleen</span>
+      <span class="page-header-title">Omega-3 &amp; Perimenopause</span>
+    </div>
+    <p class="section-title">The best sources of Omega-3</p>
+    <p class="section-intro">Food first — but for most women, supplementation is necessary to reach adequate levels.</p>
+
+    <div class="source-item">
+      <div class="source-dot">1</div>
+      <div class="source-text">
+        <strong>Oily fish (2–3x per week)</strong><br>
+        Salmon, mackerel, herring, sardines and anchovies are the richest sources. Note: farmed fish contains significantly less EPA/DHA than wild-caught.
+      </div>
+    </div>
+    <div class="source-item">
+      <div class="source-dot">2</div>
+      <div class="source-text">
+        <strong>Flaxseed &amp; chia seeds</strong><br>
+        These contain ALA (a plant-based omega-3), but your body converts only ~5% into EPA/DHA. Not sufficient as a sole source.
+      </div>
+    </div>
+    <div class="source-item">
+      <div class="source-dot">3</div>
+      <div class="source-text">
+        <strong>Omega-3 supplements (fish oil)</strong><br>
+        Choose supplements with at least 1000 mg EPA+DHA per day. Check for purity (no heavy metals) and freshness.
+      </div>
+    </div>
+    <div class="source-item">
+      <div class="source-dot">4</div>
+      <div class="source-text">
+        <strong>Algae oil (vegan option)</strong><br>
+        Fish get their omega-3 from algae. Algae oil skips the middleman and is equally effective — and more sustainable.
+      </div>
+    </div>
+
+    <div class="callout">
+      <p><strong>Quality makes the difference.</strong> Many fish oils on the market are already oxidised before you open the bottle. Choose fresh, molecularly distilled omega-3 with a high concentration of EPA and DHA. Cost per dose matters more than cost per capsule.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 5: CTA -->
+<div class="page">
+  <div class="cta-page">
+    <h2>Ready to get started?</h2>
+    <p>Omega-3 is one of the most well-researched supplements for women in perimenopause. A high-quality supplement makes a real, measurable difference.</p>
+    <div class="cta-box">
+      <div class="cta-label">Recommended product</div>
+      <div class="cta-product">Eqology Pure Arctic Oil</div>
+      <div class="cta-desc">Fresh, molecularly distilled omega-3 from wild Arctic fish. High EPA &amp; DHA content, scientifically tested for oxidation and purity.</div>
+      <div class="cta-url">Ask Heleen for the link → @perimenopauseplan</div>
+    </div>
+    <p class="cta-footer">
+      Questions? Follow <strong>@perimenopauseplan</strong> on Instagram &amp; X<br>
+      for daily tips on hormones and women's health
+    </p>
+  </div>
+</div>
+
+</body>
+</html>

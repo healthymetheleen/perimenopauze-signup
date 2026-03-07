@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>7 Signalen van Perimenopauze — Healthy met Heleen</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --mauve: #9A5672;
+    --aubergine: #6A374C;
+    --steel: #79A1B5;
+    --offwhite: #F0EEE8;
+    --peach: #E0A880;
+    --lightblue: #C4E5E9;
+    --coral: #E08781;
+    --pink: #D78496;
+    --text: #2d2d2d;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--text);
+    background: var(--offwhite);
+  }
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    background: white;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+  }
+  @media screen {
+    .page { margin: 20px auto; box-shadow: 0 4px 30px rgba(0,0,0,.12); }
+  }
+
+  /* ── COVER ── */
+  .cover {
+    background: linear-gradient(150deg, var(--aubergine) 0%, var(--mauve) 60%, var(--peach) 100%);
+    height: 297mm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 50px;
+    text-align: center;
+    position: relative;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 280px; height: 280px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 50%;
+  }
+  .cover::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: -60px;
+    width: 220px; height: 220px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+  }
+  .cover-badge {
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 22px;
+    border-radius: 30px;
+    margin-bottom: 40px;
+  }
+  .cover-number {
+    font-size: 110px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.15);
+    line-height: 1;
+    margin-bottom: 0px;
+    position: relative;
+    z-index: 1;
+  }
+  .cover-title {
+    font-size: 36px;
+    font-weight: 600;
+    color: white;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+  }
+  .cover-subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.5;
+    margin-bottom: 50px;
+    max-width: 420px;
+  }
+  .cover-line {
+    width: 60px;
+    height: 3px;
+    background: var(--peach);
+    border-radius: 2px;
+    margin: 0 auto 50px;
+  }
+  .cover-author {
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+    font-weight: 300;
+  }
+  .cover-author strong {
+    font-weight: 600;
+    color: white;
+  }
+
+  /* ── CONTENT PAGES ── */
+  .content {
+    padding: 55px 55px 50px;
+    min-height: 297mm;
+    display: flex;
+    flex-direction: column;
+  }
+  .page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1.5px solid var(--lightblue);
+    padding-bottom: 14px;
+    margin-bottom: 36px;
+  }
+  .page-header-brand {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--mauve);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .page-header-title {
+    font-size: 11px;
+    color: #999;
+    font-style: italic;
+  }
+  h1.section-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--aubergine);
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+  .section-intro {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 32px;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+  .highlight-box {
+    background: var(--offwhite);
+    border-left: 4px solid var(--mauve);
+    border-radius: 0 12px 12px 0;
+    padding: 18px 22px;
+    margin-bottom: 28px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .highlight-box strong {
+    color: var(--aubergine);
+  }
+
+  /* Signal cards */
+  .signal-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: white;
+    border: 1.5px solid #f0eee8;
+    border-radius: 14px;
+    padding: 20px 22px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 12px rgba(154,86,114,0.07);
+  }
+  .signal-number {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, var(--mauve), var(--aubergine));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 700;
+    color: white;
+  }
+  .signal-content h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--aubergine);
+    margin-bottom: 4px;
+  }
+  .signal-content p {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.55;
+  }
+  .signal-tip {
+    display: inline-block;
+    background: var(--lightblue);
+    color: var(--steel);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-top: 6px;
+  }
+
+  /* Quick wins */
+  .wins-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+  .win-card {
+    background: var(--offwhite);
+    border-radius: 12px;
+    padding: 18px 20px;
+  }
+  .win-card h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--aubergine);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .win-icon {
+    width: 24px;
+    height: 24px;
+    background: var(--mauve);
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+  }
+  .win-card p {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  /* CTA page */
+  .cta-page {
+    background: linear-gradient(150deg, var(--aubergine) 0%, var(--mauve) 100%);
+    min-height: 297mm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 55px;
+    text-align: center;
+  }
+  .cta-page h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: white;
+    line-height: 1.25;
+    margin-bottom: 18px;
+  }
+  .cta-page p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.85);
+    font-weight: 300;
+    line-height: 1.7;
+    max-width: 420px;
+    margin-bottom: 36px;
+  }
+  .cta-box {
+    background: white;
+    border-radius: 18px;
+    padding: 32px 40px;
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 32px;
+  }
+  .cta-box h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--aubergine);
+    margin-bottom: 12px;
+  }
+  .cta-box p {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 18px;
+  }
+  .cta-url {
+    display: block;
+    background: var(--coral);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 40px;
+    text-decoration: none;
+  }
+  .author-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .author-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    border: 3px solid rgba(255,255,255,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+  }
+  .author-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+  }
+  .author-title {
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+    font-weight: 300;
+  }
+
+  .spacer { flex: 1; }
+  .page-footer {
+    border-top: 1px solid #eee;
+    padding-top: 12px;
+    margin-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: #bbb;
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<div class="page">
+  <div class="cover">
+    <div class="cover-badge">Gratis gids van Healthy met Heleen</div>
+    <div class="cover-number">7</div>
+    <h1 class="cover-title">Signalen dat jij<br>in de Perimenopauze bent</h1>
+    <div class="cover-line"></div>
+    <p class="cover-subtitle">En wat je er <em>nu al</em> aan kunt doen — praktisch, eerlijk, zonder fluff</p>
+    <div class="cover-author">
+      Door <strong>Heleen Bergsma</strong><br>
+      Orthomoleculair therapeut · Perimenopauze specialist
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 2: WAT IS PERIMENOPAUZE? -->
+<div class="page">
+  <div class="content">
+    <div class="page-header">
+      <span class="page-header-brand">Healthy met Heleen</span>
+      <span class="page-header-title">7 Signalen van Perimenopauze</span>
+    </div>
+
+    <h1 class="section-title">Eerst even dit:<br>wat is perimenopauze eigenlijk?</h1>
+    <p class="section-intro">Perimenopauze is de overgangsperiode <em>voordat</em> je in de menopauze bent. Je menstruatie is er nog, maar je hormonen — met name oestrogeen en progesteron — beginnen te schommelen. Dit kan al jaren voor je laatste menstruatie beginnen, soms al rond je 35e.</p>
+
+    <div class="highlight-box">
+      <strong>Gemiddeld beginnen de eerste klachten 4 tot 10 jaar voor de laatste menstruatie.</strong> Veel vrouwen herkennen de signalen niet en zoeken jarenlang naar andere verklaringen. Terwijl het antwoord vaak heel duidelijk is.
+    </div>
+
+    <h1 class="section-title" style="font-size:22px; margin-bottom:10px;">Waarom voelen zo weinig vrouwen dit aankomen?</h1>
+    <p class="section-intro" style="margin-bottom:20px;">Omdat de klachten geleidelijk komen en vaak lijken op "gewone" stress, vermoeidheid of een druk leven. Veel huisartsen missen de perimenopauze ook — het is complexer dan een simpele bloedtest.</p>
+
+    <div class="wins-grid">
+      <div class="win-card">
+        <h4><span class="win-icon">O</span> Oestrogeen daalt</h4>
+        <p>Niet lineair — het gaat in schommelingen. Dat maakt klachten onvoorspelbaar en variabel.</p>
+      </div>
+      <div class="win-card">
+        <h4><span class="win-icon">P</span> Progesteron daalt eerder</h4>
+        <p>Dit is vaak het eerste hormoon dat begint te schommelen, al in de late 30s.</p>
+      </div>
+      <div class="win-card">
+        <h4><span class="win-icon">C</span> Cortisol stijgt</h4>
+        <p>Stresshormoon wordt minder goed gereguleerd. Kleine stressoren voelen groter.</p>
+      </div>
+      <div class="win-card">
+        <h4><span class="win-icon">T</span> Testosteron verandert</h4>
+        <p>Invloed op energie, libido en zelfvertrouwen. Vaak onderbelicht in de medische praktijk.</p>
+      </div>
+    </div>
+
+    <p style="font-size:13px; color:#888; font-weight:300;">Op de volgende pagina's vind je de 7 meest voorkomende signalen — en wat ze betekenen.</p>
+
+    <div class="spacer"></div>
+    <div class="page-footer">
+      <span>Healthy met Heleen — www.healthymetheleen.nl</span>
+      <span>Pagina 2</span>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 3: SIGNALEN 1-4 -->
+<div class="page">
+  <div class="content">
+    <div class="page-header">
+      <span class="page-header-brand">Healthy met Heleen</span>
+      <span class="page-header-title">7 Signalen van Perimenopauze</span>
+    </div>
+
+    <h1 class="section-title">De 7 signalen</h1>
+    <p class="section-intro">Herken jij er meerdere? Dan is de kans groot dat jouw lichaam je iets vertelt.</p>
+
+    <div class="signal-card">
+      <div class="signal-number">1</div>
+      <div class="signal-content">
+        <h3>Onregelmatige of veranderde menstruatie</h3>
+        <p>Je cyclus wordt korter, langer, onregelmatiger. Of het bloedverlies verandert — meer, minder, of anders dan je gewend was. Dit is vaak het eerste zichtbare teken dat je hormooncyclus aan het verschuiven is.</p>
+        <span class="signal-tip">Let op: onregelmatige cyclus kan ook andere oorzaken hebben — laat dit checken.</span>
+      </div>
+    </div>
+
+    <div class="signal-card">
+      <div class="signal-number">2</div>
+      <div class="signal-content">
+        <h3>Slaapproblemen</h3>
+        <p>Moeite met inslapen, wakker worden om 3 uur 's nachts en niet meer kunnen slapen, of gewoon onrustig slapen. Progesteron heeft een kalmerende werking — als dat daalt, voelt slapen zwaarder aan.</p>
+        <span class="signal-tip">Tip: koeler slapen en minder schermtijd 1 uur voor bed helpen al merkbaar.</span>
+      </div>
+    </div>
+
+    <div class="signal-card">
+      <div class="signal-number">3</div>
+      <div class="signal-content">
+        <h3>Opvliegers of nachtzweten</h3>
+        <p>Een plots warmtegolf vanuit borst en hoofd, soms 's nachts met heftig zweten. Niet iedereen heeft dit — en de intensiteit varieert enorm. Het heeft te maken met de thermostaat van de hypothalamus die door hormoonschommelingen minder stabiel werkt.</p>
+      </div>
+    </div>
+
+    <div class="signal-card">
+      <div class="signal-number">4</div>
+      <div class="signal-content">
+        <h3>Stemmingswisselingen en prikkelbaarheid</h3>
+        <p>Kleine dingen die je vroeger gelaten lieten, triggeren je nu enorm. Of je voelt je plotseling somber zonder duidelijke reden. Oestrogeen en progesteron spelen beiden een rol bij het reguleren van stemming via serotonine en GABA.</p>
+        <span class="signal-tip">Dit wordt vaak verward met burn-out of depressie.</span>
+      </div>
+    </div>
+
+    <div class="spacer"></div>
+    <div class="page-footer">
+      <span>Healthy met Heleen — www.healthymetheleen.nl</span>
+      <span>Pagina 3</span>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 4: SIGNALEN 5-7 -->
+<div class="page">
+  <div class="content">
+    <div class="page-header">
+      <span class="page-header-brand">Healthy met Heleen</span>
+      <span class="page-header-title">7 Signalen van Perimenopauze</span>
+    </div>
+
+    <div class="signal-card" style="margin-top:8px;">
+      <div class="signal-number">5</div>
+      <div class="signal-content">
+        <h3>Brain fog — moeite met concentreren</h3>
+        <p>Woorden die je niet meer kunt vinden, moeite met meerdere dingen tegelijk, het gevoel dat je hersenen in watten zitten. Oestrogeen is essentieel voor cognitieve functies — als het schommelt, merk je dat aan je scherpte.</p>
+        <span class="signal-tip">Veel vrouwen denken dat ze "dom worden" — dat is niet zo. Dit is hormoongebonden en tijdelijk.</span>
+      </div>
+    </div>
+
+    <div class="signal-card">
+      <div class="signal-number">6</div>
+      <div class="signal-content">
+        <h3>Gewichtstoename, met name buikvet</h3>
+        <p>Je eet niet anders dan vroeger, maar de weegschaal stijgt — en dat vet lijkt nu naar je buik te gaan. Dalend oestrogeen verandert hoe vet wordt opgeslagen. Combineer dit met cortisol en insulineresistentie, en het plaatje klopt.</p>
+        <span class="signal-tip">Meer eiwitten, minder snelle koolhydraten en krachttraining helpen hier direct bij.</span>
+      </div>
+    </div>
+
+    <div class="signal-card">
+      <div class="signal-number">7</div>
+      <div class="signal-content">
+        <h3>Droogheid, libidoverlies of gewrichtspijn</h3>
+        <p>Oestrogeen houdt slijmvliezen soepel — als dat daalt, merk je dat overal: vaginale droogheid, droge ogen, droge huid, pijnlijke gewrichten. Libido kan dalen door een mix van testosteron, vermoeidheid en zelfvertrouwen.</p>
+        <span class="signal-tip">Dit zijn lichamelijke symptomen, geen psychologische — en er zijn goede oplossingen voor.</span>
+      </div>
+    </div>
+
+    <div class="highlight-box" style="margin-top:20px;">
+      <strong>Herken jij 3 of meer van deze signalen?</strong> Dan is het de moeite waard om je hormoonbalans serieus te nemen. De volgende stap: begrijpen wat je lichaam nodig heeft.
+    </div>
+
+    <div class="spacer"></div>
+    <div class="page-footer">
+      <span>Healthy met Heleen — www.healthymetheleen.nl</span>
+      <span>Pagina 4</span>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 5: WAT NU? QUICK WINS -->
+<div class="page">
+  <div class="content">
+    <div class="page-header">
+      <span class="page-header-brand">Healthy met Heleen</span>
+      <span class="page-header-title">7 Signalen van Perimenopauze</span>
+    </div>
+
+    <h1 class="section-title">Wat kun je nu al doen?</h1>
+    <p class="section-intro">Geen grote ingrepen. Dit zijn bewezen, praktische aanpassingen die je vandaag kunt beginnen — en die echt verschil maken.</p>
+
+    <div class="wins-grid">
+      <div class="win-card">
+        <h4>Voeding aanpassen</h4>
+        <p>Meer eiwitten (elke maaltijd), minder snelle suikers. Dat stabiliseert bloedsuiker en helpt bij buikvet, slaap en energie.</p>
+      </div>
+      <div class="win-card">
+        <h4>Omega-3 vetzuren</h4>
+        <p>EPA en DHA ondersteunen hormoonproductie, verminderen ontstekingen en helpen bij hersenfunctie. Kies een pure, geconcentreerde vorm.</p>
+      </div>
+      <div class="win-card">
+        <h4>Stressreductie</h4>
+        <p>Cortisol verstoort de hormoonbalans verder. Zelfs 10 minuten wandelen of ademhaling per dag heeft meetbaar effect.</p>
+      </div>
+      <div class="win-card">
+        <h4>Krachttraining</h4>
+        <p>Spiermassa daalt in de perimenopauze. Krachttraining 2-3x per week beschermt botten, verbetert insulinegevoeligheid en stemming.</p>
+      </div>
+      <div class="win-card">
+        <h4>Slaap beschermen</h4>
+        <p>Vaste tijden, koel en donker, geen alcohol voor bed. Slaap is de grootste hefboom voor hormoonherstel.</p>
+      </div>
+      <div class="win-card">
+        <h4>Magnesium</h4>
+        <p>Ondersteunt slaap, spierherstel en stressrespons. Veel vrouwen hebben tekort zonder het te weten. Glycinaat of malaat werken goed.</p>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <strong>Wil je weten wat jouw lichaam specifiek nodig heeft?</strong> Elke vrouw is anders. Wat bij een ander werkt, werkt niet automatisch bij jou. Een gerichte aanpak — op basis van jouw klachten, leefstijl en eventuele testen — maakt het verschil.
+    </div>
+
+    <div class="spacer"></div>
+    <div class="page-footer">
+      <span>Healthy met Heleen — www.healthymetheleen.nl</span>
+      <span>Pagina 5</span>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 6: CTA -->
+<div class="page">
+  <div class="cta-page">
+    <div class="author-block" style="margin-bottom:36px;">
+      <div class="author-avatar">H</div>
+      <span class="author-name">Heleen Bergsma</span>
+      <span class="author-title">Orthomoleculair therapeut · Perimenopauze specialist</span>
+    </div>
+
+    <h2>Klaar om de volgende stap te zetten?</h2>
+    <p>Ik help vrouwen van 35 tot 55 die klaar zijn om hun hormonen te begrijpen — en hun energie, stemming en lichaam terug te nemen. Geen generieke adviezen. Jouw specifieke situatie, jouw plan.</p>
+
+    <div class="cta-box">
+      <h3>Meer weten over mijn aanpak?</h3>
+      <p>Op mijn website vind je gratis tests, meer informatie over perimenopauze en hoe ik vrouwen begeleid.</p>
+      <span class="cta-url">www.healthymetheleen.nl</span>
+    </div>
+
+    <div class="author-block">
+      <span class="author-title" style="color:rgba(255,255,255,0.6); font-size:12px;">Instagram: @perimenopauseplan</span>
+      <span class="author-title" style="color:rgba(255,255,255,0.5); font-size:11px; margin-top:4px;">Deze gids is informatief en vervangt geen medisch advies.</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
